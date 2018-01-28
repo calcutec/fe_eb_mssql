@@ -83,10 +83,7 @@ if 'RDS_DB_NAME' in os.environ:
             'USER': os.environ['RDS_USERNAME'],
             'PASSWORD': os.environ['RDS_PASSWORD'],
             'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': 1433,
-            'OPTIONS': {
-                'driver': 'ODBC Driver 13 for SQL Server',
-            },
+            'PORT': 1433
         }
     }
 else:
