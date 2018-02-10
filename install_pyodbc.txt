@@ -4,5 +4,12 @@ sudo yum info unixODBC*
 sudo yum remove unixODBC*
 sudo yum install unixODBC-utf16
 sudo yum install unixODBC-utf16-devel
-/opt/python/run/venv/bin/pip install pyodbc
-/opt/python/run/venv/bin/pip install django-pyodbc-azure
+
+========
+
+Useful commands:
+rm -rf /var/cache/yum/* # cleans up yum cache
+repoquery --list mssql-tools # list installed and available mssql-tools
+repoquery --list unixODBC-devel # list installed and available unixODBC
+
+
