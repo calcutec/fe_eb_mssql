@@ -2,5 +2,5 @@ Django
 Mako
 pytz
 psycopg2
-#pyodbc
-#django-pyodbc-azure
+pyodbc
+django-pyodbc-azure
