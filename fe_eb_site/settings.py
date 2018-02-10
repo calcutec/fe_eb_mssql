@@ -86,6 +86,16 @@ if 'RDS_DB_NAME' in os.environ:
             'PORT': os.environ['RDS_PORT']
         }
     }
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
+    #         'NAME': os.environ['RDS_DB_NAME'],
+    #         'USER': os.environ['RDS_USERNAME'],
+    #         'PASSWORD': os.environ['RDS_PASSWORD'],
+    #         'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
+    #         'PORT': os.environ['RDS_MSSQL_PORT']
+    #     }
+    # }
 else:
     DATABASES = {
         'default': {
