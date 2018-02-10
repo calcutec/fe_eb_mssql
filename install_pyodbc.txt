@@ -1,0 +1,8 @@
+curl -s https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/msprod.repo
+sudo yum update
+sudo yum info unixODBC*
+sudo yum remove unixODBC*
+sudo yum install unixODBC-utf16
+sudo yum install unixODBC-utf16-devel
+/opt/python/run/venv/bin/pip install pyodbc
+/opt/python/run/venv/bin/pip install django-pyodbc-azure
