@@ -76,26 +76,26 @@ WSGI_APPLICATION = 'fe_eb_site.wsgi.application'
 
 
 if 'RDS_DB_NAME' in os.environ:
-    DATABASES = {
-        'default': {
-            'ENGINE': os.environ['RDS_ENGINE'],
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT']
-        }
-    }
     # DATABASES = {
     #     'default': {
-    #         'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
+    #         'ENGINE': os.environ['RDS_ENGINE'],
     #         'NAME': os.environ['RDS_DB_NAME'],
     #         'USER': os.environ['RDS_USERNAME'],
     #         'PASSWORD': os.environ['RDS_PASSWORD'],
-    #         'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
-    #         'PORT': os.environ['RDS_MSSQL_PORT']
+    #         'HOST': os.environ['RDS_HOSTNAME'],
+    #         'PORT': os.environ['RDS_PORT']
     #     }
     # }
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
+            'PORT': os.environ['RDS_MSSQL_PORT']
+        }
+    }
 else:
     DATABASES = {
         'default': {
