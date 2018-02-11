@@ -75,38 +75,28 @@ WSGI_APPLICATION = 'fe_eb_site.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 
-if 'RDS_DB_NAME' in os.environ:
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': os.environ['RDS_ENGINE'],
-    #         'NAME': os.environ['RDS_DB_NAME'],
-    #         'USER': os.environ['RDS_USERNAME'],
-    #         'PASSWORD': os.environ['RDS_PASSWORD'],
-    #         'HOST': os.environ['RDS_HOSTNAME'],
-    #         'PORT': os.environ['RDS_PORT']
-    #     }
-    # }
-    DATABASES = {
-        'default': {
-            'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
-            'PORT': os.environ['RDS_MSSQL_PORT']
-        }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
+#         'NAME': os.environ['RDS_DB_NAME'],
+#         'USER': os.environ['RDS_USERNAME'],
+#         'PASSWORD': os.environ['RDS_PASSWORD'],
+#         'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
+#         'PORT': os.environ['RDS_MSSQL_PORT']
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'ebdb',
+        'USER': 'ebroot',
+        'PASSWORD': 'Dimsum123!',
+        'HOST': 'mssqlmain.cicw2foyeumk.us-east-1.rds.amazonaws.com',
+        'PORT': '1433'
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'ebdb',
-            'HOST': 'localhost',
-            'USER': 'ebroot',
-            'PASSWORD': 'Dimsum123!',
-            'PORT': '5432'
-        },
-    }
+}
 
 
 
