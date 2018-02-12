@@ -91,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'ebdb',
-        'USER': 'ebroot',
+        'USER': 'mssqlroot',
         'PASSWORD': 'Dimsum123!',
         'HOST': 'mssqlmain.cicw2foyeumk.us-east-1.rds.amazonaws.com',
         'PORT': '1433'
