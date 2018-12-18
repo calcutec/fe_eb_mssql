@@ -74,33 +74,19 @@ WSGI_APPLICATION = 'fe_eb_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': os.environ['RDS_MSSQL_ENGINE'],
-#         'NAME': os.environ['RDS_DB_NAME'],
-#         'USER': os.environ['RDS_USERNAME'],
-#         'PASSWORD': os.environ['RDS_PASSWORD'],
-#         'HOST': os.environ['RDS_MSSQL_HOSTNAME'],
-#         'PORT': os.environ['RDS_MSSQL_PORT']
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'ebdb',
-        'USER': 'mssqlroot',
-        'PASSWORD': 'Dimsum123!',
-        'HOST': 'mssqlmain.cicw2foyeumk.us-east-1.rds.amazonaws.com',
+        'HOST': os.environ['RDS_DPM_MAIN_HOSTNAME'],
+        'NAME': 'ForcedExposureDigital_Base',
+        'USER': os.environ['RDS_DPM_MAIN_USERNAME'],
+        'PASSWORD': os.environ['RDS_DPM_MAIN_PASSWORD'],
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 13 for SQL Server',
         }
     }
 }
-
 
 
 # Password validation
