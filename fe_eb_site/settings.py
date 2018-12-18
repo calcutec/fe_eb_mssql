@@ -25,7 +25,7 @@ SECRET_KEY = 'hf4=5ychx5sjw&csrvi(5=p@t8d+#woqhl(gx0!j4cb)to@wu2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fe-eb-mssql-dev.us-east-1.elasticbeanstalk.com', 'localhost']
+ALLOWED_HOSTS = ['eb-test-env.affdejsqyz.us-east-1.elasticbeanstalk.com', 'localhost']
 
 
 # Application definition
@@ -94,7 +94,10 @@ DATABASES = {
         'USER': 'mssqlroot',
         'PASSWORD': 'Dimsum123!',
         'HOST': 'mssqlmain.cicw2foyeumk.us-east-1.rds.amazonaws.com',
-        'PORT': '1433'
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 13 for SQL Server',
+        }
     }
 }
 

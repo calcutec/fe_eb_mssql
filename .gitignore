@@ -1,6 +1,6 @@
 .DS_Store
 .idea/
-ebvenv/
+testvenv/
 *.pyc
 db.sqlite3
 
