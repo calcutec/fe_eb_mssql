@@ -25,7 +25,7 @@ SECRET_KEY = 'hf4=5ychx5sjw&csrvi(5=p@t8d+#woqhl(gx0!j4cb)to@wu2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eb-test-env.affdejsqyz.us-east-1.elasticbeanstalk.com', 'localhost']
+ALLOWED_HOSTS = ['eb-test-env.affdejsqyz.us-east-1.elasticbeanstalk.com', 'localhost', 'www.thisgreatpic.com']
 
 
 # Application definition
