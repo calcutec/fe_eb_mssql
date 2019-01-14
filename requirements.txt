@@ -1,5 +1,6 @@
 Django
 Mako
 pytz
+wagtail==2.4
 #pyodbc
 #django-pyodbc-azure
